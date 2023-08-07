@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Fasthand&family=Homemade+Apple&family=Macondo&family=Moon+Dance&family=Oswald:wght@500&family=Sacramento&display=swap');
+
+body {
+    background-image: url(./asset/boisclair.jpg )  ;
+}
+
+h1, h2, h3, h4, h5  {
+    
+    font-family: 'Homemade Apple';
+    letter-spacing: -1px;
+    display: block;
+    padding-top: 30px;
+    text-shadow: 2px 2px 2px wheat;
+    color: rgb(115, 81, 81);
+       }
+
+       .control-label, .checkbox , .form-label, .tr {
+    font-family: 'Macondo';
+    font-size: 1.5rem;
+}
