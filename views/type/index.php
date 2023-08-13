@@ -9,7 +9,7 @@
     <div class="text-center ">
         <img src="../templates/asset/robbrasserie.jpg" class="rounded" alt="Robinet à bière">
         </div>
-        <a href="./type_create" class="btn btn-success mt-3">Créer un Type</a>
+        <a href="./type_create" class="btn btn-warning mt-3">Créer un Type</a>
         <br>
         <div class="table-responsive">
             <table class="table table-hover table-bordered ">
@@ -28,7 +28,7 @@
                             <!-- //on cree les lignes du tableau avec chaque valeur retournée -->
                             <td><?php echo "$ligne[ID_TYPE]"; ?></td>
                             <td><?php echo "$ligne[NOM_TYPE]"; ?></td>
-                            <td><a class="btn btn-primary" href="./type_edit?id=<?php echo $ligne['ID_TYPE']; ?>">Modifier</a></td>
+                            <td><a class="btn btn-warning" href="./type_edit?id=<?php echo $ligne['ID_TYPE']; ?>">Modifier</a></td>
                             <td><a class="btn btn-danger" href="./type_delete?id=<?php echo $ligne['ID_TYPE']; ?>">Supprimer</a></td>
 
                         </tr>

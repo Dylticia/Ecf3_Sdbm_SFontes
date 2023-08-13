@@ -57,7 +57,6 @@ class TypeModel
      // va avoir lui l'action en fonction de son ID (elle récupère l'ID)
     public function getById($id)
     {
-
         $request = $this->connexion->prepare("SELECT * FROM typebiere where ID_TYPE = :ID_TYPE");
         $request->bindParam(':ID_TYPE', $id, PDO::PARAM_INT);
         $request->execute();

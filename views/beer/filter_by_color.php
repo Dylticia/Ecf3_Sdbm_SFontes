@@ -24,7 +24,7 @@
                     </select>
                 </div>
                 <div class="mb-4 mt-4">
-                    <button type="submit" name="inscription" class="btn btn-success"> Valider votre choix</button>
+                    <button type="submit" name="inscription" class="btn btn-warning"> Valider votre choix</button>
 
                 </div>
             </form>

@@ -1,7 +1,8 @@
 <?php
 
-// routes.php
+
 //Définition de l'url (URI = Uniform Resource Identifie)
+//_SERVER['REQUEST_URI'] contient l'URI de la page en cours.
 $request_uri = $_SERVER['REQUEST_URI'];
 //explode — Scinde une chaîne de caractères en segments à parir de '/' 
 //pour récupérer le nom de la page
@@ -13,9 +14,10 @@ if (str_contains($page, '?')) {
 }
 // Definition des routes dans une variable sous forme de tableau
 $routes = [
-    
+    // Trouve le contrôleur approprié et l'action en fonction de l'URI de la requête
     // Définition des chemins selon les pages du site sous le schéma:
-    //chemin visible par l'utilisateur => 'Action :controller concerné@fichier_de_vue'
+    //chemin visible par l'utilisateur déclenche l'action 
+    //'controller concerné@fichier de vue correpondantt à la demande'
     '/beers' => 'BeerController@index',
     '/beer' => 'BeerController@show',
     '/brands' => 'BrandController@index',
@@ -29,7 +31,7 @@ $routes = [
     '/type_delete' => 'TypeController@delete',
 ];
 
-// Trouve le contrôleur approprié et l'action en fonction de l'URI de la requête
+
 $controller = null;
 $action = null;
 

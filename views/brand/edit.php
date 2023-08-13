@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <br />
-        <h3>Ajouter une marque de bière</h3>
+        <h3>Modifier une marque de bière</h3>
     </div>
 
 
@@ -20,6 +20,9 @@
             <label for="factory" class="form-label">Choisissez le fabricant:</label>
             <select class="form-select" name="factory" id="factory" required>
                 <option selected disabled value="">Sélectionner le fabricant</option>
+               
+    
+                <!-- Affichage de la liste déroulante des fabricants -->
 
                 <?php foreach ($factories as $value) : ?>
                     <option <?php echo $record['ID_FABRICANT'] == $value['ID'] ?  'selected' : ''; ?> value="<?php echo $value['ID']; ?>"><?php echo $value['NOM']; ?></option>
@@ -34,6 +37,9 @@
             <label for="country" class="form-label">Choisissez votre pays:</label>
             <select class="form-select" name="country" id="country" required>
                 <option selected disabled value="">Sélectionner le pays de la Bière</option>
+                
+ 
+                <!-- Affichage de la liste déroulante des pays -->
 
                 <?php foreach ($countries as $value) : ?>
                     <option <?php echo $record['ID_PAYS'] == $value['ID'] ?  'selected' : ''; ?> value="<?php echo $value['ID']; ?>"><?php echo $value['NOM']; ?></option>

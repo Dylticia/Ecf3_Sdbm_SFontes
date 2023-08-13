@@ -3,12 +3,12 @@
 <div class="container">
     <div class="row">
         <br />
-        <h3>Ajouter un type de bière</h3>
+        <h3>Modifier un type de bière</h3>
     </div>
 
 
     <form method="post" action="./type_edit" class="row g-3">
-        <div class="col-md-4">
+        <div class="col-md-4 my-3">
             <label for="type" class="form-label">Type</label>
             <input type="text" class="form-control" id="type" name="type" value="<?php echo !empty($record['NOM_TYPE']) ? $record['NOM_TYPE'] : ''; ?>" required>
         </div>
@@ -19,7 +19,7 @@
                 <button type="submit" class="btn btn-success">Mettre à jour</button>
             </div>
             <div class="col-md-6">
-                <a class="btn btn-secondary" href="./types">Retour</a>
+                <a class="btn" href="./types">Retour</a>
             </div>
         </div>
     </form>

@@ -22,7 +22,7 @@ class BeerController
     }
 
     // La fonction show vérifie si l'ID est présent et le récupère
-    //et dirige vers le détail de la bière choisie
+    //et dirige vers la page affichant les bières sinon vers la page erreur 404
     public function show()
     {
         if (!empty($_GET['id'])) {
@@ -43,23 +43,19 @@ class BeerController
 // le tableau des bières de la bonne couleur
     public function filterByColor()
     {
-
         $colorModel = new ColorModel();
         $colors = $colorModel->getAll();
         if (!empty($_POST['color'])) {
 
             $colorId = $_POST['color'];
             $model = new BeerModel();
-
             $data = $model->getByColor($colorId);
 
             include 'views/beer/filter_by_color.php';
         } else {
 
             $model = new BeerModel();
-
             $data = $model->getAll();
-
             include 'views/beer/filter_by_color.php';
         }
     }

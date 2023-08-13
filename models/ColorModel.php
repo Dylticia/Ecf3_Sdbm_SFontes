@@ -24,7 +24,6 @@ class ColorModel
         $requete = $this->connexion->query("SELECT * FROM couleur");
  // Exécution de la requête:
         $requete->execute();
-       
         $data = $requete->fetchAll(PDO::FETCH_ASSOC);
         Database::disconnect();
         return $data;

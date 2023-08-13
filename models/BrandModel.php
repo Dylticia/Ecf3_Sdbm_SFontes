@@ -42,7 +42,8 @@ class BrandModel
     public function insert($nomMarque, $idPays, $idFabricant)
     {
         $idMarque = $this->generateId();
-        $request = $this->connexion->prepare("INSERT INTO marque(ID_MARQUE, NOM_MARQUE, ID_PAYS, ID_FABRICANT) VALUES (:ID_MARQUE, :NOM_MARQUE, :ID_PAYS, :ID_FABRICANT)");
+        $request = $this->connexion->prepare("INSERT INTO marque(ID_MARQUE, NOM_MARQUE, ID_PAYS, ID_FABRICANT) 
+        VALUES (:ID_MARQUE, :NOM_MARQUE, :ID_PAYS, :ID_FABRICANT)");
         $request->bindParam(':ID_MARQUE', $idMarque, PDO::PARAM_INT);
         $request->bindParam(':NOM_MARQUE', $nomMarque, PDO::PARAM_STR);
         $request->bindParam(':ID_PAYS', $idPays, PDO::PARAM_INT);
@@ -80,9 +81,10 @@ class BrandModel
      //La fonction edit comprend la requete SQL permettant de modifier une marque 
      //dans la BDD en modifiant chaque champ nécessaire
     public function edit($id, $brandName, $countryId, $factoryId)
-    {
-        
-        $request = $this->connexion->prepare("UPDATE marque SET NOM_MARQUE = :NOM_MARQUE, ID_PAYS= :ID_PAYS, ID_FABRICANT= :ID_FABRICANT WHERE ID_MARQUE = :ID_MARQUE");
+    {        
+        $request = $this->connexion->prepare("UPDATE marque 
+        SET NOM_MARQUE = :NOM_MARQUE, ID_PAYS= :ID_PAYS, ID_FABRICANT= :ID_FABRICANT 
+        WHERE ID_MARQUE = :ID_MARQUE");
         $request->bindParam(':ID_MARQUE', $id, PDO::PARAM_INT);
         $request->bindParam(':NOM_MARQUE', $brandName, PDO::PARAM_STR);
         $request->bindParam(':ID_PAYS', $countryId, PDO::PARAM_INT);

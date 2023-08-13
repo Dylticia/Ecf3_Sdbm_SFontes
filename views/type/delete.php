@@ -15,8 +15,8 @@
 
             <form class="form-horizontal" action="./type_delete" method="POST">
                 <input type="hidden" name="id" value="<?php echo $record['ID_TYPE']; ?>" />
-                <button type="submit" class="btn btn-danger">OUI</button>
-                <a class="btn btn-secondary" href="./types">NON</a>
+                <button type="submit" class="btn btn-danger">OUI, je le veux</button>
+                <a class="btn btn-secondary" href="./types">NON, c'est une erreur!</a>
             </form>
 
         </div>
